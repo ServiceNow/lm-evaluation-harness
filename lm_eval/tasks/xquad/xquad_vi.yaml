@@ -1,0 +1,3 @@
+task: xquad_vi
+class: !function task.XQUADVi
+include: default_yaml

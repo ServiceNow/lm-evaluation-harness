@@ -1,0 +1,4 @@
+group:
+  - mlqa
+task: mlqa_vi
+class: !function task.MlqaViVi

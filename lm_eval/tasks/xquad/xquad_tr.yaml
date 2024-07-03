@@ -1,0 +1,3 @@
+task: xquad_tr
+class: !function task.XQUADTr
+include: default_yaml

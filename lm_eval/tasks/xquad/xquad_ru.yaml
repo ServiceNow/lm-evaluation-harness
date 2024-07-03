@@ -1,0 +1,3 @@
+task: xquad_ru
+class: !function task.XQUADRu
+include: default_yaml

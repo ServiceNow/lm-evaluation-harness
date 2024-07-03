@@ -1,0 +1,47 @@
+group:
+  - xlsum
+task: xlsum_en
+dataset_path: csebuetnlp/xlsum
+dataset_name: english
+output_type: generate_until
+# training_split: train
+fewshot_split: train
+# test_split: test
+validation_split: validation
+doc_to_text: "<s> [INST] Summarize the important information concisely in the same language in which you have been provided the document below: {{text}} [/INST]:"
+# doc_to_text: "{{text}}\nSummarize:"
+doc_to_target: "{{summary}}" #" {{answer.split('### ')[-1].rstrip()}}"
+metric_list:
+  - metric: bleu
+  - metric: rougeLsum
+  - metric: rougeL
+    # aggregation: mean
+    # higher_is_better: true
+    # ignore_case: true
+    # ignore_punctuation: false
+    # regexes_to_ignore:
+    #   - ","
+    #   - "\\$"
+    #   - "(?s).*#### "
+    #   - "\\.$"
+generation_kwargs:
+  until:
+    - "</s>"
+  do_sample: true
+  temperature: 0.2
+repeats: 1
+# num_fewshot: 5
+# filter_list:
+#   - name: "strict-match"
+#     filter:
+#       - function: "regex"
+#         regex_pattern: "#### (\\-?[0-9\\.\\,]+)"
+#       - function: "take_first"
+#   - name: "flexible-extract"
+#     filter:
+#       - function: "regex"
+#         group_select: -1
+#         regex_pattern: "(-?[$0-9.,]{2,})|(-?[0-9]+)"
+#       - function: "take_first"
+metadata:
+  version: 0.0

@@ -1,0 +1,4 @@
+group:
+  - mlqa
+task: mlqa_de
+class: !function task.MlqaDeDe

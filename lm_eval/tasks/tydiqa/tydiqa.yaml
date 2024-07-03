@@ -1,0 +1,2 @@
+task: tydiqa
+class: !function task.TyDiQA

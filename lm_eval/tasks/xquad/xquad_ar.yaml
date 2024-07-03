@@ -1,0 +1,3 @@
+task: xquad_ar
+include: default_yaml
+class: !function task.XQUADAr

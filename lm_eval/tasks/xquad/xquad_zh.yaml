@@ -1,0 +1,3 @@
+task: xquad_zh
+class: !function task.XQUADZh
+include: default_yaml

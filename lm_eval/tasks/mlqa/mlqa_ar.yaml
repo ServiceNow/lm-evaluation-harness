@@ -1,0 +1,6 @@
+group:
+  - mlqa
+task: mlqa_ar
+class: !function task.MlqaArAr
+metadata:
+  version: 3.0
