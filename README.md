@@ -1,3 +1,22 @@
+## Steps to Run Multilingual NLP Benchmarks
+
+
+1. We used the lm-evaluation-harness for running evaluations across multilingual NLP benchmarks. The benchmarks are added to the tasks folder [here](https://github.com/ServiceNow/lm-evaluation-harness/tree/main/lm_eval/tasks).
+
+2. Run the commands below to setup lm-eval.
+```
+git clone https://github.com/ServiceNow/lm-evaluation-harness.git
+cd lm-evaluation-harness
+pip install -e .
+```
+2. Add the pretrained model paths [here](https://github.com/ServiceNow/lm-evaluation-harness/blob/d1ca1964fb6dfe1f1be01dfd7d02c5c6395b3946/run_eval.sh#L6).
+
+3. Use the [`run_eval.sh`](https://github.com/ServiceNow/lm-evaluation-harness/blob/main/run_eval.sh) script to run evaluations across all benchmarks.
+
+4. The limit is set to 100 for the generative tasks but can be increased, though it will increase the evaluation runtime.
+
+------------
+
 # Language Model Evaluation Harness
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10256836.svg)](https://doi.org/10.5281/zenodo.10256836)
